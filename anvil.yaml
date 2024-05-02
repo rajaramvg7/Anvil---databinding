@@ -1,9 +1,31 @@
-allow_embedding: false
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: MovieDisplay}
 package_name: M3_App_1
+allow_embedding: false
 name: M3 App 1
-startup_form: Form1
-renamed: true
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-dependencies: []
-services: []
+startup_form: null
+db_schema:
+  movies:
+    client: none
+    server: full
+    columns:
+    - name: movie_name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: year
+      admin_ui: {width: 200, order: 1}
+      type: number
+    - name: director
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: summary
+      admin_ui: {width: 200, order: 3}
+      type: string
+    title: Movies
+renamed: true

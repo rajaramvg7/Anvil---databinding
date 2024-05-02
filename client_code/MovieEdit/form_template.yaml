@@ -1,0 +1,43 @@
+container: {type: ColumnPanel}
+components:
+- name: label_1
+  properties: {text: Film Name}
+  type: Label
+  layout_properties: {grid_position: 'NQEBOJ,UEWPIB'}
+- name: text_box_1
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'NQEBOJ,FEFRUW'}
+  data_bindings:
+  - {property: text, code: 'self.item[''movie_name'']', writeback: true}
+- name: label_2
+  properties: {text: Release Year}
+  type: Label
+  layout_properties: {grid_position: 'YWZDKO,BWSXIY'}
+- name: text_box_2
+  properties: {type: number}
+  type: TextBox
+  layout_properties: {grid_position: 'YWZDKO,WPKYSG'}
+  data_bindings:
+  - {property: text, code: 'self.item[''year'']', writeback: true}
+- name: label_3
+  properties: {text: Director}
+  type: Label
+  layout_properties: {grid_position: 'OXGLZV,YVVRKA'}
+- name: text_box_3
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'OXGLZV,CZYVWM'}
+  data_bindings:
+  - {property: text, code: 'self.item[''director'']', writeback: true}
+- name: label_4
+  properties: {text: Plot Summary}
+  type: Label
+  layout_properties: {grid_position: 'VNGWVY,TOKLXZ'}
+- name: text_area_1
+  properties: {}
+  type: TextArea
+  layout_properties: {grid_position: 'MAXQWL,AGARCD'}
+  data_bindings:
+  - {property: text, code: 'self.item[''summary'']', writeback: true}
+is_package: true

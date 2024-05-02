@@ -1,0 +1,63 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: label_3
+    properties: {text: 'Film Name:'}
+    type: Label
+    layout_properties: {grid_position: 'ZJDDQF,YNZTPJ'}
+  - name: label_2
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'ZJDDQF,QLEMMR'}
+    data_bindings:
+    - {property: text, code: 'self.item[''movie_name'']', writeback: false}
+  - name: label_5
+    properties: {text: 'Release Year:'}
+    type: Label
+    layout_properties: {grid_position: 'EIWJSL,ITJJQW'}
+  - name: label_4
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'EIWJSL,MGZUFM'}
+    data_bindings:
+    - {property: text, code: 'self.item[''year'']', writeback: false}
+  - name: label_7
+    properties: {text: 'Director:'}
+    type: Label
+    layout_properties: {grid_position: 'LXSJHE,BBITPT'}
+  - name: label_6
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'LXSJHE,APVWTW'}
+    data_bindings:
+    - {property: text, code: 'self.item[''director'']', writeback: false}
+  - name: label_8
+    properties: {text: 'Plot Summary:'}
+    type: Label
+    layout_properties: {grid_position: 'QSNPNO,ODPUUV'}
+  - name: label_9
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'GZMJCP,NGRTQC'}
+    data_bindings:
+    - {property: text, code: 'self.item[''summary'']', writeback: false}
+  - name: edit_btn
+    properties: {text: Edit Movie, role: filled-button}
+    type: Button
+    layout_properties: {grid_position: 'VFFOGE,ICEHJL'}
+    event_bindings: {click: edit_btn_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: label_1
+  properties: {text: My Favorate Cinema}
+  type: Label
+  layout_properties: {slot: title}
